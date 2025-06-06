@@ -33,7 +33,7 @@ class Dashboard extends HTMLElement{
             </div>
             <form id="post-form">
                 <input type="text" id="post-title" placeholder="escribe la letra" required />
-                <letra id="letter" placeholder="letter" required></letra>
+                < id="letter" placeholder="letter" required></>
                  <color id="color" placeholder="color" required></color>
                 <textarea id="post-caption" placeholder="escribe aqui el color" required></textarea>
                 <button type="submit">crea el postt</button>
@@ -41,9 +41,9 @@ class Dashboard extends HTMLElement{
             <ul class="post-list">
                 ${state.postList.map(post => `
                     <li>
-                        <h2>${post.title}</h2>
+                        <h2>${post.letter}</h2>
                         <p>${post.caption}</p>
-                        ${state.currentUser?.letter === 'admin' ? `<button class="delete-post" data-id="${post.postId}">Delete</button>` : ''}
+                        ${state.currentUser?.username === 'admin' ? `<button class="delete-post" data-id="${post.postId}">Delete</button>` : ''}
                     </li>
                 `).join('')}
             </ul>

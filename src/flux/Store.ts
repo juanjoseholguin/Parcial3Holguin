@@ -60,7 +60,7 @@ class Store {
         this._myState.postList = action.payload as Post[];
         this._emitChange();
         break;
-      case posts.DELETE_COLOR_POSTS:
+      case posts.DELETE_POST:
         this._myState.postList = action.payload as Post[];
         this._emitChange();
         break;

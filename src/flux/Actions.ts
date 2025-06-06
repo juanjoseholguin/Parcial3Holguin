@@ -1,5 +1,5 @@
 import { AppDispatcher } from './Dispatcher';
-import { getPostsDb, addColorPostDb, deletePostDb, getUsersDb, registerUserDb } from '../services/firebase';
+import { getPostsDb, addColorPostDb, deleteColorPostDb, getUsersDb, registerUserDb } from '../services/firebase';
 import { Post } from './Store';
 
 export const auth = {
@@ -101,12 +101,12 @@ export const postsActions = {
     });
 
     AppDispatcher.dispatch({
-      type: posts.ADD_POST,
+      type: posts.AD_COLOR_POST,
       payload: postList
     });
   },
   deletePost: async (postId: string) => {
-    await deletePostDb(postId);
+    await deleteColorPostDb(postId);
     
     const postData = await getPostsDb();
     const postList: Post[] = [];
@@ -117,7 +117,7 @@ export const postsActions = {
     });
 
     AppDispatcher.dispatch({
-      type: posts.ADD_POST,
+      type: posts.AD_COLOR_POST,
       payload: postList
     });
   }

@@ -1,0 +1,338 @@
+
+
+:root {
+  --primary-color: #4849E8;   
+  --secondary-color: #ABC4FF; 
+  --accent-color: #DDF344;   
+  --bg-color: #111827;        
+  --text-color: #4849E8;      
+  --font-title: 'Fredoka', sans-serif;
+  --font-body: 'Nunito', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+
+h1 {
+  font-family: var(--font-title);
+  color: var(--primary-color);
+  font-size: 3rem;
+  margin-top: 1.5rem;
+  text-shadow: 2px 2px var(--secondary-color);
+}
+
+
+.app-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: var(--bg-color);
+}
+
+
+button {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.75rem 1rem;
+  font-family: var(--font-title);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #3837b0; 
+}
+
+/* Inputs de archivo */
+input[type="file"] {
+  border: 2px dashed var(--primary-color);
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: var(--primary-color);
+  padding: 0.5rem;
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+
+input[type="file"]::file-selector-button {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  border: none;
+  border-radius: 4px;
+  padding: 0.4rem 0.8rem;
+  font-family: var(--font-title);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+.error-message {
+  color: var(--accent-color);
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+
+meme-form .card {
+  background-color: #1f2937;
+  border-radius: 8px;
+  padding: 1.2rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+  width: 100%;
+  max-width: 400px;
+  margin: 1rem auto;
+}
+
+meme-form h2 {
+  margin: 0 0 1rem;
+  font-size: 1.5rem;
+  color: #f1f5f9;
+  text-align: center;
+  font-family: var(--font-title);
+}
+
+meme-form label {
+  display: block;
+  font-weight: 600;
+  color: #cbd5e1;
+  margin-bottom: 0.4rem;
+  font-family: var(--font-body);
+}
+
+meme-form .preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.8rem;
+}
+
+meme-form .progress {
+  margin-top: 0.6rem;
+}
+
+meme-form .progress-wrapper {
+  margin-bottom: 0.6rem;
+}
+
+meme-form .progress-wrapper span {
+  display: block;
+  font-size: 0.85rem;
+  color: #e5e7eb;
+  margin-bottom: 0.2rem;
+  font-family: var(--font-body);
+}
+
+meme-form .bar {
+  width: 100%;
+  height: 8px;
+  background: #374151;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid var(--accent-color);
+}
+
+meme-form .fill {
+  width: 0%;
+  height: 100%;
+  background: var(--accent-color);
+  transition: width 0.3s ease;
+}
+
+meme-form button {
+  margin-top: 1rem;
+  width: 100%;
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-family: var(--font-title);
+}
+
+meme-form button:hover {
+  background: #3837b0;
+}
+
+meme-form .error {
+  margin-top: 0.6rem;
+  color: var(--accent-color);
+  font-size: 0.9rem;
+  text-align: center;
+  min-height: 1.2rem;
+  font-family: var(--font-body);
+}
+
+
+meme-gallery .gallery-wrapper {
+  background-color: #1f2937;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+  margin: 1rem auto;
+  width: 100%;
+  max-width: 800px;
+}
+
+meme-gallery h2 {
+  margin: 0 0 1rem;
+  color: #f1f5f9;
+  text-align: center;
+  font-family: var(--font-title);
+}
+
+meme-gallery .error {
+  color: var(--accent-color);
+  text-align: center;
+  margin-bottom: 1rem;
+  min-height: 1.2rem;
+  font-family: var(--font-body);
+}
+
+meme-gallery .controls {
+  margin-bottom: 1rem;
+  text-align: right;
+}
+
+meme-gallery .controls label {
+  margin-right: 0.5rem;
+  color: #f1f5f9;
+  font-family: var(--font-body);
+}
+
+meme-gallery .controls select {
+  background: #374151;
+  color: #f1f5f9;
+  border: 1px solid var(--accent-color);
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+
+meme-gallery .memes-container {
+  display: grid;
+  gap: 0.6rem;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+}
+
+meme-gallery .meme-item {
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 6px;
+  border: 2px solid #374151;
+  background: #1e293b;
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+}
+
+meme-gallery .meme-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+}
+
+meme-gallery .meme-thumb {
+  display: block;
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+}
+
+meme-gallery .meme-date {
+  font-size: 0.8rem;
+  color: #9ca3af;
+  text-align: center;
+  padding: 0.3rem 0;
+  font-family: var(--font-body);
+}
+
+@media (min-width: 600px) {
+  meme-gallery .meme-thumb {
+    height: 140px;
+  }
+}
+
+
+meme-viewer .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(72,73,232, 0.9); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+meme-viewer .modal {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  max-width: 90%;
+  max-height: 90%;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+  position: relative;
+}
+
+meme-viewer .modal img,
+meme-viewer .modal video {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+meme-viewer .close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 1.2rem;
+  line-height: 30px;
+  text-align: center;
+  cursor: pointer;
+}
+
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 4px;
+}
